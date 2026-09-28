@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#203129">
+  <meta name="description" content="Discover local climate action in Maynooth. Explore the town’s projects, find practical next steps and get involved in the Decarbonising Zone.">
+  <title>Local projects &amp; case studies | Maynooth DZ</title>
+  <link rel="stylesheet" href="assets/fonts.css"><link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script><script src="project-data.js" defer></script><script src="projects.js" defer></script><link rel="stylesheet" href="projects.css">
+<link rel="stylesheet" href="breadcrumbs.css"><link rel="stylesheet" href="navigation.css"><script src="navigation.js" defer></script></head>
+<body class="directory-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="brand-bar" aria-hidden="true"></div>
+  <div class="nav-wrap container">
+    <a href="index.html" class="logo" aria-label="DZ Action Maynooth home"><img src="assets/logo.svg" width="190" height="40" alt="DZ Action — Decarbonising Zone Maynooth"></a>
+    <button class="menu-toggle" aria-label="Open menu" aria-controls="navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="index.html#about">About</a><a href="map.html">Map</a><a href="projects.html" aria-current="page">Projects</a><a href="take-action.html">Take Action</a><a href="community.html">Community</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<section class="directory-intro" aria-labelledby="directory-title"><div class="container">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Projects</span></nav>
+<h1 id="directory-title">Local projects &amp; case studies</h1>
+<p class="directory-description">Discover the projects helping Maynooth take climate action — and the people and places making it happen.</p>
+<form class="directory-tools" role="search" id="project-search">
+<div class="search-field"><span aria-hidden="true">⌕</span><label class="sr-only" for="search-projects">Search projects by name</label><input type="search" id="search-projects" placeholder="Search projects by name" autocomplete="off"><button type="button" id="clear-search" aria-label="Clear search" hidden>×</button></div>
+<div class="sort-field"><label class="sr-only" for="project-sort">Sort projects</label><select id="project-sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="az">Name: A–Z</option></select></div>
+<div class="view-switch" role="group" aria-label="Display projects as"><button type="button" data-view="cards" aria-pressed="true">Cards</button><button type="button" data-view="list" aria-pressed="false">List</button></div>
+</form>
+<div class="filter-row"><div class="category-filters" role="group" aria-label="Filter by category"></div><p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p></div>
+</div></section>
+<section class="directory-results container" aria-label="Project results">
+<p class="sample-note">Demonstration directory · Includes sample projects and illustrative photos.</p>
+<div id="project-results" class="project-results"></div>
+<div class="empty-results" id="empty-results" hidden><div class="empty-symbol" aria-hidden="true">⌕</div><div><h2 id="empty-title">No projects found</h2><p id="empty-copy">Try another search or clear your filters — or explore Maynooth on the map.</p></div><div class="empty-buttons"><button class="button outline" id="reset-filters">Clear filters</button><button class="button map-open">See the map</button></div></div>
+<noscript><p>Please enable JavaScript to browse and filter the project directory.</p></noscript>
+</section></main>
+<footer id="contact" class="footer">
+ <div class="container">
+  <div class="footer-top"><div class="footer-brand"><a href="index.html" aria-label="Maynooth DZ home"><img src="assets/logo-white.svg" width="191" height="40" alt="DZ Action — Decarbonising Zone Maynooth"></a><img class="social-icons" src="assets/social.svg" width="85" height="24" alt="LinkedIn, Instagram and Facebook"></div><div class="partners"><img src="assets/kildare.webp" width="177" height="40" alt="Kildare County Council"><img src="assets/climate.webp" width="81" height="40" alt="We're taking climate action"><img src="assets/government.png" width="115" height="40" alt="Government of Ireland"></div></div>
+  <div class="footer-rule" aria-hidden="true"></div>
+  <div class="footer-nav" id="sitemap"></div>
+  <p class="contact-line">Climate Action Office, Kildare County Council, <a href="mailto:climateaction@kildarecoco.ie">climateaction@kildarecoco.ie</a></p>
+  <div class="footer-rule" aria-hidden="true"></div>
+  <div class="footer-bottom"><div><button class="footer-text" data-info="accessibility">Accessibility statement</button><button class="footer-text" data-info="privacy">Privacy &amp; cookie policy</button><button class="footer-text" data-info="cookies">Cookie settings</button><a href="#sitemap" id="sitemap-link">Sitemap</a></div><p>Designed and Developed by <span>Matrix Internet</span></p></div>
+ </div><div class="brand-bar" aria-hidden="true"></div>
+</footer>
+<dialog id="map-dialog" class="map-dialog" aria-labelledby="map-dialog-title"><div class="dialog-heading"><h2 id="map-dialog-title">Explore Maynooth</h2><div class="map-tools"><button id="zoom-out" aria-label="Zoom out">−</button><output id="zoom-level" aria-live="polite">100%</output><button id="zoom-in" aria-label="Zoom in">+</button><button id="zoom-reset">Reset</button><button class="close-dialog" aria-label="Close map">×</button></div></div><div class="map-viewport"><div class="map-art large-map" data-map-art><img class="map-base" src="assets/map.webp" width="2400" height="1600" alt="Detailed illustrated map of Maynooth"><div class="map-stickers" aria-hidden="true"></div></div></div></dialog>
+<dialog id="info-dialog" class="info-dialog" aria-labelledby="info-title"><button class="close-dialog" aria-label="Close">×</button><h2 id="info-title"></h2><p id="info-copy"></p></dialog>
+</body>
+</html>
