@@ -1,7 +1,8 @@
 'use strict';
 window.MaynoothProjects=(()=>{
-const categories={'All projects':'#203129',Retrofit:'#d9684f',Transport:'#02a59f',Biodiversity:'#1b853f',Energy:'#a47b13',Community:'#8562a5','Public realm':'#258d78'};
-const categoryIcons={'All projects':'all-projects',Retrofit:'home',Transport:'travel',Biodiversity:'leaf',Energy:'energy',Community:'community','Public realm':'public-realm'};
+const categories={'All projects':'#203129',Energy:'#a47b13',Retrofit:'#d9684f',Transport:'#02a59f','Biodiversity & Resilience':'#1b853f','Community action':'#8562a5','Public realm':'#258d78','Education awareness':'#f3b63e','Sustainable Practices':'#006168','Circular economy':'#ad9d50','Water & Nature-based Solutions':'#43c6c6'};
+const categoryIcons={'All projects':'all-projects',Energy:'energy',Retrofit:'home',Transport:'travel','Biodiversity & Resilience':'leaf','Community action':'community','Public realm':'public-realm','Education awareness':'education','Sustainable Practices':'sustainable','Circular economy':'circular','Water & Nature-based Solutions':'water-nature'};
+const categoryAliases={Biodiversity:'Biodiversity & Resilience',Community:'Community action'};
 const rows=[
  ['DemoHouse Retrofit','Retrofit','Complete','retrofit.webp','A Maynooth home upgraded to A-rating — open for the town to learn from.'],
  ['Royal Canal Greenway Links','Transport','Underway','canal.webp','Safer walking and cycling connections from the Greenway into town.'],
@@ -25,5 +26,7 @@ const rows=[
 const projects=rows.map(([title,category,status,image,description],i)=>({id:title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),title,category,status,image,description,date:Date.UTC(2026,8,24-i*6)}));
 const locations=[[67,65],[40,73],[52,58],[35,38],[23,52],[58,43],[72,53],[82,63],[29,77],[42,28],[62,32],[50,39],[76,76],[47,67],[19,32],[31,61],[70,25],[58,81]];
 projects.forEach((p,i)=>{p.location={x:locations[i][0],y:locations[i][1]};});
-return {categories,categoryIcons,projects};
+const reassigned={'maynooth-repair-caf':'Circular economy','climate-skills-swap':'Education awareness','community-energy-check-in':'Sustainable Practices','rain-gardens-for-maynooth':'Water & Nature-based Solutions'};
+projects.forEach(p=>{p.originalCategory=p.category;p.category=reassigned[p.id]||categoryAliases[p.category]||p.category;});
+return {categories,categoryIcons,projects,categoryAliases};
 })();

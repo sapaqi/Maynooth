@@ -30,12 +30,14 @@
 <div class="sort-field"><label class="sr-only" for="project-sort">Sort projects</label><select id="project-sort"><option value="newest">Newest first</option><option value="oldest">Oldest first</option><option value="az">Name: A–Z</option></select></div>
 <div class="view-switch" role="group" aria-label="Display projects as"><button type="button" data-view="cards" aria-pressed="true">Cards</button><button type="button" data-view="list" aria-pressed="false">List</button></div>
 </form>
-<div class="filter-row"><div class="category-filters" role="group" aria-label="Filter by category"></div><p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p></div>
+<div class="filter-row"><button type="button" class="filter-toggle" id="filter-toggle" aria-expanded="false" aria-controls="category-filters"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h18v3l-7 7v6l-4-2v-4L3 7Z"/></svg><span>Filter by category</span><span id="active-filter-count" hidden>1</span></button><p id="result-count" role="status" aria-live="polite" aria-atomic="true"></p></div>
+<div class="category-filters" id="category-filters" role="group" aria-label="Filter by category" hidden></div>
 </div></section>
 <section class="directory-results container" aria-label="Project results">
 <p class="sample-note">Demonstration directory · Includes sample projects and illustrative photos.</p>
 <div id="project-results" class="project-results"></div>
 <div class="empty-results" id="empty-results" hidden><div class="empty-symbol" aria-hidden="true">⌕</div><div><h2 id="empty-title">No projects found</h2><p id="empty-copy">Try another search or clear your filters — or explore Maynooth on the map.</p></div><div class="empty-buttons"><button class="button outline" id="reset-filters">Clear filters</button><button class="button map-open">See the map</button></div></div>
+<nav class="project-pagination" id="project-pagination" aria-label="Project pages"></nav>
 <noscript><p>Please enable JavaScript to browse and filter the project directory.</p></noscript>
 </section></main>
 <footer id="contact" class="footer">
