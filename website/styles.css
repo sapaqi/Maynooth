@@ -70,3 +70,37 @@ html{font-size:clamp(1rem,calc(.4375rem + .625vw),2rem)}
 .project-card,.directory-card{position:relative}.project-link{text-decoration:none}.project-link:after{content:'';position:absolute;inset:0;z-index:1}.project-link:focus-visible{outline:none}.project-card:focus-within,.directory-card:focus-within{outline:3px solid var(--green);outline-offset:4px}
 .hero-actions{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem}.hero-actions .button{white-space:nowrap}
 @media(max-width:640px){.hero-actions{flex-direction:column}.hero-actions .button{width:100%}}
+
+/* Homepage Take action cards, matched to the supplied six-card layout. */
+.take-action{padding-block:5rem 5.5rem;background:#f8f7f2}
+.action-grid{margin-top:2rem}
+#action-track{gap:1.5rem}
+#action-track .action-card{min-height:9.75rem;padding:1.4rem 1.5rem;gap:1.25rem;align-items:center;border-radius:.25rem;transition:transform .25s ease,box-shadow .25s ease}
+#action-track .action-card:hover{filter:none;transform:translateY(-3px);box-shadow:0 .6rem 1.5rem #20312918}
+#action-track .action-card strong{font-size:1.25rem;line-height:1.28;letter-spacing:-.025rem}
+#action-track .action-card>span:nth-child(2){flex:1;min-width:0}
+#action-track .action-card>span:nth-child(2)>span{margin-top:.35rem;font-size:1rem;line-height:1.45}
+#action-track .action-icon{background:#20312912;border:0;width:3.25rem;height:3.25rem}
+#action-track .action-arrow{width:1.5rem;height:1.75rem;object-fit:contain}
+#action-track .see-all strong{white-space:nowrap}
+@media(max-width:1100px){#action-track{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){.take-action{padding-block:3rem}.action-grid{margin-top:1.5rem}#action-track{grid-template-columns:1fr;gap:1rem}#action-track .action-card{min-height:7.5rem;padding:1.25rem;gap:1rem}#action-track .action-card strong{font-size:1.125rem}#action-track .action-card>span:nth-child(2)>span{font-size:.875rem}#action-track .action-icon{width:2.75rem;height:2.75rem}}
+
+/* Full viewport mobile navigation, shared by every page. */
+@media(max-width:950px){
+ body.mobile-menu-open{overflow:hidden}
+ body.mobile-menu-open .site-header{position:fixed;inset:0;background:#031331;z-index:80;backdrop-filter:none;-webkit-backdrop-filter:none;overflow:auto;overscroll-behavior:contain}
+ body.mobile-menu-open .site-header .brand-bar{display:none}
+ body.mobile-menu-open .site-header .nav-wrap{min-height:100dvh;height:auto;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:5.5rem minmax(0,1fr);align-items:start;gap:0;border:0;padding:0 2rem}
+ body.mobile-menu-open .logo{align-self:center;z-index:1}
+ body.mobile-menu-open .logo img{content:url('assets/logo-white.svg');width:11.875rem;height:2.5rem}
+ body.mobile-menu-open .menu-toggle{align-self:center;justify-self:end;width:2.8rem;height:2.8rem;padding:.4rem}
+ body.mobile-menu-open .menu-toggle span{width:2.35rem;height:.2rem;border-radius:2px;background:white}
+ body.mobile-menu-open .menu-toggle[aria-expanded=true] span:nth-child(1){transform:translateY(.57rem) rotate(45deg)}
+ body.mobile-menu-open .menu-toggle[aria-expanded=true] span:nth-child(3){transform:translateY(-.57rem) rotate(-45deg)}
+ body.mobile-menu-open nav.open{position:static;grid-column:1/-1;display:flex;flex-direction:column;align-items:stretch;align-self:stretch;gap:0;background:transparent;box-shadow:none;backdrop-filter:none;padding:1.5rem 0 3rem;overflow:visible;animation:none}
+ body.mobile-menu-open nav.open>a{position:relative;display:flex;align-items:center;min-height:4rem;order:0;padding:.8rem .35rem;color:white;font-size:1.25rem;font-weight:700;border-bottom:1px solid #ffffff33}
+ body.mobile-menu-open nav.open>a[href$='map.html']{order:-1}
+ body.mobile-menu-open nav.open>a::after{content:'»';position:static;display:block;width:auto;height:auto;margin-left:auto;background:none;transform:none;color:#02b6ad;font-family:Inter,Arial,sans-serif;font-weight:400;font-size:1.8rem;line-height:1;letter-spacing:-.3rem;padding-right:.3rem}
+}
+@media(max-width:640px){body.mobile-menu-open .site-header .nav-wrap{padding-inline:2rem}}

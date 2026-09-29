@@ -26,3 +26,7 @@
 @media(max-width:1200px){#map-legend{grid-template-columns:repeat(5,minmax(0,1fr))}}
 @media(max-width:900px){#map-legend{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:540px){#map-legend{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.map-key{padding:1rem}.map-filter-row{flex-wrap:nowrap}.map-filter-row p{font-size:.75rem;text-align:right}.map-filter-row .filter-toggle{font-size:.8125rem}#map-category-filters .category-filter{flex:initial}.map-pin{width:2.85rem;height:3.66rem}.map-pin img{top:.43rem;width:1.85rem;height:1.85rem}}
+
+/* On wide monitors, reveal more map vertically as its width increases. */
+@media(min-width:801px){.interactive-map{height:78svh;max-height:62rem}}
+@media(min-width:90rem){.interactive-map{height:clamp(32rem, calc(78svh + 25vw - 22.5rem), 82rem);max-height:none}}

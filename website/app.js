@@ -17,10 +17,10 @@ $$('.map-stickers').forEach(layer => {
 
 const menuButton = $('.menu-toggle');
 const navigation = $('#navigation');
-function closeMenu() { menuButton.setAttribute('aria-expanded','false'); menuButton.setAttribute('aria-label','Open menu'); navigation.classList.remove('open'); }
+function closeMenu() { menuButton.setAttribute('aria-expanded','false'); menuButton.setAttribute('aria-label','Open menu'); navigation.classList.remove('open'); document.body.classList.remove('mobile-menu-open'); }
 menuButton.addEventListener('click', () => {
   const open = menuButton.getAttribute('aria-expanded') !== 'true';
-  menuButton.setAttribute('aria-expanded',String(open)); menuButton.setAttribute('aria-label',open ? 'Close menu' : 'Open menu'); navigation.classList.toggle('open',open);
+  menuButton.setAttribute('aria-expanded',String(open)); menuButton.setAttribute('aria-label',open ? 'Close menu' : 'Open menu'); navigation.classList.toggle('open',open); document.body.classList.toggle('mobile-menu-open',open);
 });
 $$('a,button',navigation).forEach(link => link.addEventListener('click',closeMenu));
 document.addEventListener('keydown',event => { if(event.key === 'Escape') closeMenu(); });
