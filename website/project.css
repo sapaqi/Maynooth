@@ -5,3 +5,7 @@
 @media(max-width:640px){.detail-heading-grid{grid-template-columns:1fr;gap:1rem}.detail-locator .location-crop{height:11rem}}
 
 .grant-icons{display:flex;align-items:center;gap:1.25rem;margin-top:1.25rem}.grant-icons img{width:2.5rem;height:2.5rem;object-fit:contain}.project-partners{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center;gap:1.25rem;margin-top:1.25rem}.project-partners img{display:block;width:100%;height:5rem;object-fit:contain}@media(max-width:640px){.project-partners{max-width:22rem}.grant-icons{gap:1rem}}
+
+/* Optional map-free project header retains the same typography and spacing. */
+.detail-heading-grid.detail-heading-no-map{grid-template-columns:minmax(0,1fr);gap:0}
+.detail-heading-no-map .detail-lead{max-width:48rem}

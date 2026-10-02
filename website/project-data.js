@@ -4,7 +4,7 @@ const categories={'All projects':'#203129',Energy:'#a47b13',Retrofit:'#d9684f',T
 const categoryIcons={'All projects':'all-projects',Energy:'energy',Retrofit:'home',Transport:'travel','Biodiversity & Resilience':'leaf','Community action':'community','Public realm':'public-realm','Education awareness':'education','Sustainable Practices':'sustainable','Circular economy':'circular','Water & Nature-based Solutions':'water-nature'};
 const categoryAliases={Biodiversity:'Biodiversity & Resilience',Community:'Community action'};
 const rows=[
- ['DemoHouse Retrofit','Retrofit','Complete','retrofit.webp','A Maynooth home upgraded to A-rating — open for the town to learn from.'],
+ ['DemoHouse Retrofit','Retrofit','Complete','retrofit.webp','A completed home retrofit demonstrating the journey to an A-rating. The demonstration house is now closed.'],
  ['Royal Canal Greenway Links','Transport','Underway','canal.webp','Safer walking and cycling connections from the Greenway into town.'],
  ['Harbour Field for Pollinators','Biodiversity','Planned','pollinators.webp','Turning the Harbour Field into a haven for bees and wildflowers.'],
  ['Solar on the Community Hall','Energy','Underway','town-centre.webp','A sample rooftop solar project to help a shared community building use cleaner energy.'],
@@ -25,7 +25,7 @@ const rows=[
 ];
 const projects=rows.map(([title,category,status,image,description],i)=>({id:title.toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,''),title,category,status,image,description,date:Date.UTC(2026,8,24-i*6)}));
 const locations=[[67,65],[40,73],[52,58],[35,38],[23,52],[58,43],[72,53],[82,63],[29,77],[42,28],[62,32],[50,39],[76,76],[47,67],[19,32],[31,61],[70,25],[58,81]];
-projects.forEach((p,i)=>{p.location={x:locations[i][0],y:locations[i][1]};});
+projects.forEach((p,i)=>{p.showMap=p.id!=='demohouse-retrofit';p.location=p.showMap?{x:locations[i][0],y:locations[i][1]}:null;});
 const reassigned={'maynooth-repair-caf':'Circular economy','climate-skills-swap':'Education awareness','community-energy-check-in':'Sustainable Practices','rain-gardens-for-maynooth':'Water & Nature-based Solutions'};
 projects.forEach(p=>{p.originalCategory=p.category;p.category=reassigned[p.id]||categoryAliases[p.category]||p.category;});
 return {categories,categoryIcons,projects,categoryAliases};
