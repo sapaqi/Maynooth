@@ -7,6 +7,17 @@ document.documentElement.classList.add('js');
 // Use the original map illustrations, placed at the Figma coordinates.
 const stickers = [['bee',95,163,53],['bee',651,379,53],['tree',584,12,51],['tree',34,38,51],['train',477,289,71],['chicken',624,110,53],['house',278,136,51],['house',422,82,51],['house',137,352,51],['house',409,405,51]];
 $$('.map-stickers').forEach(layer => {
+  if(window.MaynoothProjects){
+    const {projects,categories,categoryIcons}=window.MaynoothProjects;
+    const seen=new Set();
+    projects.filter(p=>p.showMap!==false&&p.location).filter(p=>{if(seen.has(p.category))return false;seen.add(p.category);return true}).slice(0,7).forEach((p,index)=>{
+      const pin=document.createElement('span');pin.className='home-category-pin';
+      pin.style.cssText=`left:${p.location.x}%;top:${p.location.y}%;--category:${categories[p.category]};--delay:-${index*.65}s`;
+      pin.innerHTML=`<span class="home-pin-face"><svg viewBox="0 0 56 72" aria-hidden="true"><path d="M28 2C13.6 2 2 13.6 2 28c0 18 19 35 26 42 7-7 26-24 26-42C54 13.6 42.4 2 28 2Z"/></svg><img src="assets/${categoryIcons[p.category]}-icon.svg" alt=""></span>`;
+      layer.append(pin);
+    });
+    return;
+  }
   stickers.forEach(([name,x,y,w],index) => {
     const img = document.createElement('img');
     img.src = `assets/${name}.webp`; img.alt = ''; img.className = name;
