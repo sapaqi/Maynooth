@@ -107,7 +107,7 @@ footerGroups.forEach(([title,href,links])=>{
   const details=document.createElement('details');details.className='footer-group';
   const summary=document.createElement('summary');summary.textContent=title;details.append(summary);
   const list=document.createElement('ul');
-  links.forEach(label=>{const li=document.createElement('li'),a=document.createElement('a');a.textContent=label;a.href=label==='Resources'?'resources.html':title==='Community'?'community.html'+(label==='Events'?'#events':label==='Updates'?'#updates':'#join'):title==='Take Action'&&label==='Retrofit your home'?'take-action.html':title==='Map'?'map.html':title==='Projects'?'projects.html':(document.body.classList.contains('directory-page')?'index.html'+href:href);li.append(a);list.append(li)});
+  links.forEach(label=>{const li=document.createElement('li'),a=document.createElement('a');a.textContent=label;a.href=label==='Resources'?'resources.html':title==='About'?'about.html':title==='Community'?'community.html'+(label==='Events'?'#events':label==='Updates'?'#updates':'#join'):title==='Take Action'&&label==='Retrofit your home'?'take-action.html':title==='Map'?'map.html':title==='Projects'?'projects.html':(document.body.classList.contains('directory-page')?'index.html'+href:href);li.append(a);list.append(li)});
   details.append(list);$('#sitemap').append(details);
   summary.addEventListener('click',e=>{if(innerWidth>640)e.preventDefault()});
 });
