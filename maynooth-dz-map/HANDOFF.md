@@ -82,3 +82,6 @@ Zwektoryzowano zaakceptowany widok bardziej z góry exec-56c2eb70-a067-4fce-be33
 
 ## 2026-10-07 — North Campus, punkt 4
 Zaakceptowany raster TSI Building exec-dd638413-305c-49d3-a80d-6ff73f5e07bb.png zamieniono na Maynooth-University-North-Campus-light.svg (1349 ścieżek, 238831 bajtów). Usunięto 34 kształty OSM 1120450486 wraz z cieniem. Grupa maynooth-north-campus-landmark: translate(1417 918) scale(.128), bez rozciągania. Podgląd PNG i przycisk North Campus. SVG, HTML, index i preview zsynchronizowane. Bez rasterów osadzonych w SVG. Skrypty north-campus/trace.py, integrate.py, finalize.py.
+
+## 2026-10-07 — Maynooth Community Church, punkt 10
+Zachowany raster exec-eb0fc046-aff2-4bcd-9c5b-26bf217815a2.png zamieniono na Maynooth-Community-Church-light.svg (1278 ścieżek, 244920 bajtów). Przezroczystość uproszczona do maski alfa, bez zewnętrznej poświaty. Zastąpiono 33 kształty bryły OSM 1315884245 wraz z cieniem. Grupa maynooth-community-church-landmark: translate(2758 1027) scale(.057). Parking i drogi zachowane. Nie mylić z St Mary’s Church (osobny landmark). Dodano przycisk Community Church i PNG. Mapa zawiera dziewięć ilustracyjnych landmarków, bez osadzonych rasterów. Skrypty mcc/trace.py, integrate.py, finalize.py.
