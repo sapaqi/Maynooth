@@ -9,7 +9,7 @@ Open `index.html` in a browser. Drag to pan and use the mouse wheel or controls 
 Extract this ZIP and upload its contents to the root of a GitHub repository. For GitHub Pages, select the repository branch and root directory under Settings → Pages.
 
 ## Files
-- `index.html`: interactive preview with embedded SVG.
+- `index.html`: moved to `website/MapSVG.html` (published by Netlify). Interactive preview with embedded SVG.
 - `map.svg`: standalone editable vector map without embedded raster images.
 - `HANDOFF.md`: project history, projection and landmark notes.
 - `preview-manor-mills.png`: close-up of the latest landmark.
