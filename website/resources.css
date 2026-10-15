@@ -12,3 +12,18 @@
 .resources-heading h1::after{content:'';display:block;width:4rem;height:.3rem;background:#02a59f;border-radius:2px;margin-top:1rem}
 .resources-cta{background:#d1e6da;border-left:4px solid #258d78}
 @media(max-width:640px){.resource-group{padding:1.125rem 1rem}.resource-row{overflow-wrap:anywhere}.resource-meta{padding-left:3.375rem}}
+
+/* Client resource hierarchy: international through to local. */
+.resources-page .resource-jump-links{display:flex;flex-wrap:wrap;gap:.625rem;margin-top:1.5rem;max-width:52rem}
+.resource-jump-links a{padding:.5rem .9rem;background:#edf5ef;border:1px solid #20312925;border-radius:2rem;font-size:.875rem;text-decoration:none;transition:background .2s}
+.resource-jump-links a:hover{background:#cee8dc}
+.resources-page .resource-group{scroll-margin-top:8rem}
+.resources-page .resource-group:nth-of-type(4){--resource-accent:#8562a5;--resource-tint:#f3eef7;--resource-badge:#e2d6ec;--resource-ink:#62447e}
+.resources-page .resource-group:nth-of-type(5){--resource-accent:#1b853f;--resource-tint:#eff5e8;--resource-badge:#d7e7c8;--resource-ink:#2e603b}
+.resources-page .resource-name{min-width:0;flex:1}.resource-name small{display:block;font-size:.75rem;font-weight:400;color:#526259;margin-top:.25rem}
+.resources-page .resource-row.resource-pending:hover{background:white;border-color:#20312918}
+@media(max-width:640px){.resource-jump-links{gap:.5rem}.resource-jump-links a{font-size:.8125rem}.resources-page .resource-group{scroll-margin-top:7rem}}
+
+/* The category bar is a <nav>; undo the site-wide main-menu nav styles (mobile drop-down, hover underline). */
+.resources-page .resource-jump-links{position:static;flex-direction:row;align-items:center;background:none;backdrop-filter:none;box-shadow:none;padding:0;animation:none}
+.resources-page .resource-jump-links a::after{content:none}
