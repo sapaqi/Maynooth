@@ -1,0 +1,4 @@
+Moving gradient — Figma first-party shader, adapted to browser WebGPU. Uses original mesh, noise, twist, morph, orientation and OKLab color interpolation code. Screenshot values: Detail 1.78; Intensity 1.65; Twist 1.87; Flow .27; Zoom 25%; Speed 35%; Morph 1.69; Material None; Balance 0%; Color method Height. Latest available Figma shader source was used; the uploaded .fig export does not establish its original shader version or timeline phase.
+Open compare-hero.html on HTTPS hosting (e.g. Netlify). Requires WebGPU support. Unsupported browsers retain a STATIC gradient. Reduced-motion freezes the mesh; animation pauses when hidden/offscreen. Rendering capped at 1600 pixels wide. Original index.html unchanged.
+
+Fill compositing corrected: base linear gradient left-to-right #D1F3D6 to #8FDD9B at 100%; WebGPU canvas opacity 25%. Only the animation layer is translucent; text, map and buttons retain their existing opacity.

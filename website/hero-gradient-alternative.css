@@ -1,0 +1,4 @@
+/* Figma fill stack: opaque horizontal lime gradient, Moving gradient at 25%. */
+.hero.animated-gradient{background:linear-gradient(90deg,#D1F3D6 0%,#8FDD9B 100%);animation:none;isolation:isolate}
+.hero.animated-gradient::before,.hero.animated-gradient::after{display:none}
+.hero-moving-canvas{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none;display:block;opacity:.25}
