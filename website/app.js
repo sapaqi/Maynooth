@@ -13,7 +13,7 @@ $$('.map-stickers').forEach(layer => {
     projects.filter(p=>p.showMap!==false&&p.location).filter(p=>{if(seen.has(p.category))return false;seen.add(p.category);return true}).slice(0,7).forEach((p,index)=>{
       const pin=document.createElement('span');pin.className='home-category-pin';
       pin.style.cssText=`left:${p.location.x}%;top:${p.location.y}%;--category:${categories[p.category]};--delay:-${index*.65}s`;
-      pin.innerHTML=`<span class="home-pin-face"><svg viewBox="0 0 56 72" aria-hidden="true"><path d="M28 2C13.6 2 2 13.6 2 28c0 18 19 35 26 42 7-7 26-24 26-42C54 13.6 42.4 2 28 2Z"/></svg><img src="assets/${categoryIcons[p.category]}-icon.svg" alt=""></span>`;
+      pin.innerHTML=`<span class="home-pin-face"><svg viewBox="-4 -4 64 80" aria-hidden="true"><path d="M28 2C13.6 2 2 13.6 2 28c0 18 19 35 26 42 7-7 26-24 26-42C54 13.6 42.4 2 28 2Z"/></svg><img src="assets/${categoryIcons[p.category]}-icon.svg" alt=""></span>`;
       layer.append(pin);
     });
     return;

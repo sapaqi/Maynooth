@@ -30,3 +30,19 @@
 /* On wide monitors, reveal more map vertically as its width increases. */
 @media(min-width:801px){.interactive-map{height:78svh;max-height:62rem}}
 @media(min-width:90rem){.interactive-map{height:clamp(32rem, calc(78svh + 25vw - 22.5rem), 82rem);max-height:none}}
+
+/* Final map: 15 tiles, 5 columns by 3 rows, 10000 × 5625 pixels. */
+.town-map-tiles{position:absolute;inset:0;pointer-events:none;user-select:none;overflow:hidden}.town-map-tiles>.town-map-image{position:absolute;inset:0;width:100%;height:100%}.town-map-tile{position:absolute;width:20%;height:calc(100% / 3);max-width:none;display:block;pointer-events:none;user-select:none}
+
+/* Draw tiles at the zoomed layout size, avoiding enlargement of a cached
+   low-resolution compositor surface. Preview remains underneath until loaded. */
+.map-stage{will-change:auto}
+.town-map-tile{visibility:hidden;opacity:0}
+.show-map-detail .town-map-tile.ready{visibility:visible;opacity:1}
+
+/* Approved white outline, larger marker with unchanged illustration size. */
+.map-pin{width:3rem;height:3.75rem}
+.map-pin .map-pin-shape path,.map-pin:hover .map-pin-shape path,.map-pin[aria-pressed=true] .map-pin-shape path,.map-pin:focus-visible .map-pin-shape path{stroke:#fff;stroke-width:6;stroke-linejoin:round}
+.map-pin img{width:1.3875rem;height:1.3875rem;top:.5625rem}
+.map-pin-face,.map-pin:hover .map-pin-face,.map-pin[aria-pressed=true] .map-pin-face{filter:drop-shadow(0 4px 4px #203129b0)}
+.map-pin:focus-visible .map-pin-face{filter:drop-shadow(0 4px 4px #203129b0) drop-shadow(0 0 3px #203129)}
