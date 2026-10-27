@@ -11,3 +11,5 @@ Netlify: publish directory `website` (set in netlify.toml). For a manual upload,
 Current update: approved larger category pins, white outline, unchanged illustration size, stronger shadow; homepage hero shows the complete current map; Wander the map uses a center crop. Map page retains its full-resolution detail tiles and zoom behavior.
 
 Project locations remain illustrative. Three Resources PDFs are still awaiting supplied files; those entries are labelled PDF coming soon. No CMS/backend is included.
+
+Pin update: icons shifted down; marker size is 75% at zoom 100%, smoothly reaching 100% at zoom 200%. Homepage preview markers use 75% size.

@@ -46,3 +46,6 @@
 .map-pin img{width:1.3875rem;height:1.3875rem;top:.5625rem}
 .map-pin-face,.map-pin:hover .map-pin-face,.map-pin[aria-pressed=true] .map-pin-face{filter:drop-shadow(0 4px 4px #203129b0)}
 .map-pin:focus-visible .map-pin-face{filter:drop-shadow(0 4px 4px #203129b0) drop-shadow(0 0 3px #203129)}
+
+/* Lower the illustration into the visual centre of the marker head. */
+.map-pin img{top:.8125rem}
