@@ -49,3 +49,10 @@
 
 /* Lower the illustration into the visual centre of the marker head. */
 .map-pin img{top:.8125rem}
+
+/* Higher visibility on the detailed map: +25% body, stronger white edge and shadow. */
+.map-pin{width:3.75rem;height:4.6875rem}
+.map-pin .map-pin-shape path,.map-pin:hover .map-pin-shape path,.map-pin[aria-pressed=true] .map-pin-shape path,.map-pin:focus-visible .map-pin-shape path{stroke-width:7}
+.map-pin img{top:1.1890625rem}
+.map-pin-face,.map-pin:hover .map-pin-face,.map-pin[aria-pressed=true] .map-pin-face{filter:drop-shadow(0 2px 2px #102019d9) drop-shadow(0 6px 7px #102019b3)}
+.map-pin:focus-visible .map-pin-face{filter:drop-shadow(0 2px 2px #102019d9) drop-shadow(0 6px 7px #102019b3) drop-shadow(0 0 3px #fff)}

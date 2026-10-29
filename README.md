@@ -13,3 +13,5 @@ Current update: approved larger category pins, white outline, unchanged illustra
 Project locations remain illustrative. Three Resources PDFs are still awaiting supplied files; those entries are labelled PDF coming soon. No CMS/backend is included.
 
 Pin update: icons shifted down; marker size is 75% at zoom 100%, smoothly reaching 100% at zoom 200%. Homepage preview markers use 75% size.
+
+2026-10-29: pins enlarged another 25%, white outline strengthened, two-layer drop shadow added on Map and homepage previews. Illustration sizes preserved; vertical offsets adjusted to remain centred.

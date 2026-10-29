@@ -133,3 +133,9 @@ html{font-size:clamp(1rem,calc(.4375rem + .625vw),2rem)}
 /* Homepage previews represent the unzoomed map. */
 .home-category-pin{width:2.25rem;height:2.8125rem}
 .map-stickers .home-pin-face img{top:.609375rem;width:1.040625rem;height:1.040625rem}
+
+/* Match the more visible map pins in homepage previews. */
+.home-category-pin{width:2.8125rem;height:3.515625rem}
+.home-pin-face svg path{stroke-width:7}
+.home-pin-face{filter:drop-shadow(0 2px 2px #102019d9) drop-shadow(0 6px 7px #102019b3)}
+.map-stickers .home-pin-face img{top:.891796875rem}
